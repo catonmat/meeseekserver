@@ -5,6 +5,8 @@ use std::thread;
 use std::time::Duration;
 use std::fs;
 
+use meeseekserver::ThreadPool;
+
 fn main() {
   let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
   let pool = ThreadPool::new(5);
